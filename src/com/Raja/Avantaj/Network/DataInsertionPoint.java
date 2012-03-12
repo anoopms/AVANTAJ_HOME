@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.util.Log;
 
 public class DataInsertionPoint {
 	
@@ -29,11 +30,13 @@ public class DataInsertionPoint {
 	
 	protected void DataInsertionMethod(String Technology, String TechnologyDetail)
 	{
-		
+	
+		Log.d("technology", Technology);
+		Log.d("technologydetail", TechnologyDetail);
 		ContentValues currentinsertion = new ContentValues();
-		currentinsertion.put(dataBase1.COLUMN_TECHNOLOGY, Technology);
-		currentinsertion.put(dataBase1.COLUMN_TECHNOLOGYDETAILS, TechnologyDetail);
-		sqliteDatabase.insert(dataBase1.TABLE_SAFE, null, currentinsertion);
+		currentinsertion.put(DataBase1.COLUMN_TECHNOLOGY, Technology);
+		currentinsertion.put(DataBase1.COLUMN_TECHNOLOGYDETAILS, TechnologyDetail);
+		sqliteDatabase.insert(DataBase1.TABLE_SAFE, null, currentinsertion);
 		
 		
 		//cursor.moveToFirst();

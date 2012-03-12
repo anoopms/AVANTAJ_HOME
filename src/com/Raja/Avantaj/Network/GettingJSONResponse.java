@@ -19,6 +19,8 @@ import com.Raja.Avantaj.R;
 
 import android.app.Activity;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +39,7 @@ public class GettingJSONResponse extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.download);
 		downloadbutton = (Button)findViewById(R.id.download);
@@ -64,45 +67,94 @@ public class GettingJSONResponse extends Activity {
 		
 		private String[] Technologies1;
 		private String[] TechnologyDescription1;
+		StringBuilder s =null;
+		Boolean online = null;
+		
+		public boolean isOnline()
+		{
+			ConnectivityManager cm = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
+			NetworkInfo netinfo = cm.getActiveNetworkInfo();
+			if(netinfo != null && netinfo.isConnected())
+			{
+				return true;
+			}
+			return false;
+		}
 
 		@Override
 		protected String doInBackground(String... params) {
 			// TODO Auto-generated method stub
-			StringBuilder stringbuilder = new StringBuilder();
-			HttpClient client = new DefaultHttpClient();
-			HttpGet url = new HttpGet(params[0]);
-			try
+			
+			if(isOnline())
 			{
-				HttpResponse response = client.execute(url);
-				HttpEntity entity = response.getEntity();
-				InputStream stream = entity.getContent();
-				BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-				String line ;
-				while((line = reader.readLine()) != null)
+				online = true;
+				StringBuilder stringbuilder = new StringBuilder();
+				HttpClient client = new DefaultHttpClient();
+				HttpGet url = new HttpGet(params[0]);
+				try
 				{
-					stringbuilder.append(line);
+					HttpResponse response = client.execute(url);
+					HttpEntity entity = response.getEntity();
+					InputStream stream = entity.getContent();
+					BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+					String line ;
+					while((line = reader.readLine()) != null)
+					{
+						stringbuilder.append(line);
+					}
 				}
+				
+				catch(ClientProtocolException e)
+				{
+					Log.d("error in clientprotocol", "error");
+					e.printStackTrace();
+				}
+				catch(IOException e)
+				{
+					Log.d("error in IO", "error");
+					e.printStackTrace();
+				}
+				return stringbuilder.toString();
+
 			}
-			
-			catch(ClientProtocolException e)
+			else
 			{
-				Log.d("error in clientprotocol", "error");
-				e.printStackTrace();
+				online = false;
+				DataInsertionPoint insertion = new DataInsertionPoint(GettingJSONResponse.this);
+				String databasestring = "";
+				/*for(int i1=0; i1<raja.length(); i1++)
+				{
+				}*/
+				insertion.open();
+					//insertion.DataInsertionMethod(Technologies1[i1], TechnologyDescription1[i1]);*/
+					Cursor c = insertion.getCursor();
+					c.moveToFirst();
+					//c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGY);
+					//c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGYDETAILS);
+					while(!c.isAfterLast())
+					{
+						
+						databasestring = databasestring + c.getString(c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGY));
+						//results.setText(c.getString(c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGYDETAILS)));
+						c.moveToNext();
+					}
+					c.close();
+					//insertion.close();
+					return databasestring;
+				
 			}
-			catch(IOException e)
-			{
-				Log.d("error in IO", "error");
-				e.printStackTrace();
-			}
-			return stringbuilder.toString();
-			
+						
 			
 		}
 
 		@Override
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
-			DataInsertionPoint insertion = new DataInsertionPoint(GettingJSONResponse.this);
+			Log.d("online boolean value is:" , String.valueOf(online));
+			if(online)
+			{
+				
+				Log.d("online data available", "online data available");
 			try {
 				JSONObject jsonobject = new JSONObject(result);
 				JSONArray raja = jsonobject.getJSONArray("Technologies");
@@ -115,31 +167,26 @@ public class GettingJSONResponse extends Activity {
 					
 					Technologies1[i] = raja.getJSONObject(i).getString("name");
 					TechnologyDescription1[i] = raja.getJSONObject(i).getString("desc");
-					Log.d("technology :", raja.getJSONObject(i).getString("name"));
-					Log.d("technologydescription :", raja.getJSONObject(i).getString("desc"));
+					Log.d("Technology :", Technologies1[i]);
+					Log.d("TechnologyDescription :", TechnologyDescription1[i]);
+					//Log.d("technology :", raja.getJSONObject(i).getString("name"));
+					//Log.d("technologydescription :", raja.getJSONObject(i).getString("desc"));
 				}
-				for(int i1=0; i1<raja.length(); i1++)
-				{
-					
-					insertion.DataInsertionMethod(Technologies1[i1], TechnologyDescription1[i1]);
-				}
-				Cursor c = insertion.getCursor();
-				c.moveToFirst();
-				c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGY);
-				c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGYDETAILS);
-				while(!c.isAfterLast())
-				{
-					results.append(c.getString(c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGY)));
-					
-					results.append(c.getString(c.getColumnIndex(DataBase1.COLUMN_TECHNOLOGYDETAILS)));
-				}
+				
+				//insertion.open();
+				
 				
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				Log.d("desc:", "error");
 			}
-			//results.setText(result);
+			}
+			else 
+			{
+				Log.d("not online data", "not online data");
+				results.setText(result);
+			}
 		}
 		
 		}

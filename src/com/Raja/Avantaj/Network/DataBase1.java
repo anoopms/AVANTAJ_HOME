@@ -3,6 +3,7 @@ package com.Raja.Avantaj.Network;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DataBase1 extends SQLiteOpenHelper {
 	
@@ -22,6 +23,7 @@ public class DataBase1 extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
+		Log.d("in on create", "in on create");
 		db.execSQL(DATABASE_CREATE);
 
 	}

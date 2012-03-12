@@ -3,25 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
-    android:background="@drawable/sea">
+    android:weightSum="10">
     <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#174B60"
+        android:background="#DCDCDC"
         >
         <ImageView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/avantajlog"
+            android:src="@drawable/avantajlogo"
             android:layout_centerInParent="true"
-            android:scaleType="center"
             android:id="@+id/iv2"/>
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/login"
-           	android:layout_centerVertical="true"
+            android:text="Client's Login"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:textStyle="bold"
             android:id="@+id/login"
             />
     </RelativeLayout>
