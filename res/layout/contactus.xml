@@ -7,11 +7,19 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"
         android:text="@string/office_branch1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+=======
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="122dp"
+        android:text="@string/office_branch1_detailedaddress"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+>>>>>>> 6f38d3bd16f3270dceba69c8c4f9b06e4a03a1e9
 
     <TextView
         android:id="@+id/textView2"
@@ -26,9 +34,15 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="130dp"
+=======
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="135dp"
+>>>>>>> 6f38d3bd16f3270dceba69c8c4f9b06e4a03a1e9
         android:text="@string/office_branch2"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -36,8 +50,14 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
+=======
+        android:layout_above="@+id/textView1"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_marginBottom="48dp"
+>>>>>>> 6f38d3bd16f3270dceba69c8c4f9b06e4a03a1e9
         android:text="@string/office_branch2_detailedaddress"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

@@ -3,9 +3,14 @@
     package="com.Raja.Avantaj"
     android:versionCode="1"
     android:versionName="1.0" >
-
+	
     <uses-sdk android:minSdkVersion="12" />
+<<<<<<< HEAD
 
+=======
+	 <uses-permission  android:name="android.permission.INTERNET"/>
+	  
+>>>>>>> 6f38d3bd16f3270dceba69c8c4f9b06e4a03a1e9
     <application
         android:icon="@drawable/avantajlogo"
         android:label="@string/app_name" 
@@ -29,6 +34,7 @@
              
         </activity>
         <activity android:name="com.Raja.Avantaj.Network.GettingJSONResponse">
+<<<<<<< HEAD
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +44,11 @@
            
         </activity>
         
+=======
+       </activity>
+       <activity android:name=".MapUs"></activity>
+        <uses-library android:name="com.google.android.maps" />
+>>>>>>> 6f38d3bd16f3270dceba69c8c4f9b06e4a03a1e9
     </application>
     <uses-permission  android:name="android.permission.INTERNET"/>
     <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>

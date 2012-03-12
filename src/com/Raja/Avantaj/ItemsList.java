@@ -1,12 +1,14 @@
 package com.Raja.Avantaj;
 
+import com.google.android.maps.MapActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ItemsList extends Activity {
+public class ItemsList extends MapActivity {
 
 	Button buttonforlogin;
 	@Override
@@ -25,6 +27,11 @@ public class ItemsList extends Activity {
 			}
 		});
 		
+	}
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
