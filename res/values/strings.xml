@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AvantajActivity!</string>
+    <string name="app_name">Avantaj</string>
+    <string name="office_branch1">Trivandrum</string>
+    <string name="office_branch1_detailedaddress">TC 5/11\n 
+        IInd Floor\n
+         Kaira Comlplex\n
+         Ambalamukku\n
+          Trivandrum 695 005\n
+          Kerala.\n
+          Phone : 0471-3060722, 3021576\n
+          www.avantajsoftwares.com</string>
+          <string name="office_branch2">Cochin</string>
+          <string name="office_branch2_detailedaddress">2nd Floor\n
+               Parakott Towers\n
+Girinagar\n
+ Cochin-20\n
+Kerala.\n
+www.avantajsoftwares.com\n
+Email : info@avantajsoftwares.com</string>
+
+</resources>

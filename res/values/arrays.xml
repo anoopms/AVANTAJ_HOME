@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <array name="menuitems">
+        <item >Technologies</item>
+        <item >Clients</item>
+        <item >Projects</item>
+        <item >Employees</item>
+        <item >Owners</item>
+        <item >Career Options</item>
+        <item >Contact Details</item>
+        <item >Request  Quote and Send Comments</item>
+        <item>Online Data</item>
+    </array>
+    <array name="employees">
+        <item>ABHILASH</item>
+        <item>SHYJU</item>
+        <item>SAFEENA</item>
+        <item>VIKAS</item>
+        <item>ANUJ</item>
+        <item>CHRISTIE</item>
+        <item>MISAJ</item>
+        <item>SARITH</item>
+        <item>DORA</item>
+    </array>
+    <array name="employeesdescription">
+        <item>ABHILASH_description</item>
+        <item>SHYJU_description</item>
+        <item>our hr. very bubbly and energetic girl. someone who is always seen laughing. she takes care of lot of things. like bringing tiffin for all of her colleagues with out fail and after office ends she takes tuition for lkg studednts. she has a daughter. i want to see how a childs child behave.
+          </item>
+        <item>VIKAS_description</item>
+        <item>ANUJ_description</item>
+        <item>CHRISTIE_description</item>
+        <item>MISAJ_description</item>
+        <item>SARITH_description</item>
+        <item>DORA_description</item>
+    </array>
+    <array name="technologies">
+        <item>Mobile</item>
+        <item>Web</item>
+        <item>Applications</item>
+    </array>
+    <array name="technologydetails">
+        <item>Description1</item>
+        <item>Description2</item>
+        <item>Description3</item>
+    </array>
+    <array name="webprojects">
+        <item>webproject1</item>
+        <item>webproject2</item>
+        <item>webproject3</item>
+        <item>webproject4</item>
+        <item>webproject5</item>
+        
+    </array>
+    <array name="androidprojects">
+        <item>androidproject1</item>
+        <item>androidproject2</item>
+        <item>androidproject3</item>
+        <item>androidproject4</item>
+        <item>androidproject5</item>
+        
+    </array>
+    <array name="iphoneprojects">
+        <item>iphoneproject1</item>
+        <item>iphoneproject2</item>
+        <item>iphoneproject3</item>
+        <item>iphoneproject4</item>
+        <item>iphoneproject5</item>
+        
+    </array>
+    <array name="webprojectsdescription">
+        <item>webproject1_description</item>
+        <item>webproject2_description</item>
+        <item>webproject3_description</item>
+        <item>webproject4_description</item>
+        <item>webproject5_description</item>
+        
+    </array>
+    <array name="androidprojectsdescription">
+        <item>androidproject1_description</item>
+        <item>androidproject2_description</item>
+        <item>androidproject3_description</item>
+        <item>androidproject4_description</item>
+        <item>androidproject5_description</item>
+        
+    </array>
+    <array name="iphoneprojectsdescription">
+        <item>iphoneproject1_description</item>
+        <item>iphoneproject2_description</item>
+        <item>iphoneproject3_description</item>
+        <item>iphoneproject4_description</item>
+        <item>iphoneproject5_description</item>
+        
+    </array>
+    <array name="iphoneprojectslinks">
+        <item>iphoneproject1_link</item>
+        <item>iphoneproject2_link</item>
+        <item>iphoneproject3_link</item>
+        <item>iphoneproject4_link</item>
+        <item>iphoneproject5_link</item>
+        
+    </array>
+    <array name="androidprojectslinks">
+        <item>androidproject1_link</item>
+        <item>androidproject2_link</item>
+        <item>androidproject3_link</item>
+        <item>androidproject4_link</item>
+        <item>androidproject5_link</item>
+        
+    </array>
+    <array name="webprojectslinks">
+        <item>webproject1_link</item>
+        <item>webproject2_link</item>
+        <item>webproject3_link</item>
+        <item>webproject4_link</item>
+        <item>webproject5_link</item>
+        
+    </array>
+    
+    
+    
+    
+</resources>

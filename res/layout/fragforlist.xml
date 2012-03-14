@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@drawable/sea">
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#174B60"
+        >
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avantajlog"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:id="@+id/iv2"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login"
+           	android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/login"
+            />
+    </RelativeLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="horizontal"
+    android:layout_weight="9"
+    android:weightSum="10"
+    >
+<fragment 
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:name="com.Raja.Avantaj.FragForList"
+    android:id="@+id/fragment0"
+    android:layout_weight="3"
+    >
+ </fragment>
+ <LinearLayout android:layout_width="2dp"
+     android:layout_height="match_parent"
+     android:background="#DCDCDC">
+     </LinearLayout>
+<LinearLayout 
+    android:id="@+id/layoutfordetails"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_weight="7"
+    >
+    </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/me"
+    android:minHeight="400dp" >
+
+    <ImageView
+        android:contentDescription="Supimon"
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="500dp"
+        android:layout_marginTop="117dp"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:contentDescription="Jacob Muricken"
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginRight="149dp"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:contentDescription="Siju Yohannan"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginLeft="102dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginLeft="93dp"
+        android:layout_toRightOf="@+id/imageView3"
+        android:contentDescription="Amalesh"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginRight="119dp"
+        android:layout_marginTop="31dp"
+        android:text="Supimon"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_marginRight="118dp"
+        android:text="Jacob George Muricken"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="78dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Siju Yohannan"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="Amalesh K P"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
