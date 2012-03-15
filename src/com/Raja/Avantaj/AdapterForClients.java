@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 /**
- * Added comment
+ * Added comment misaj
  * @author user2
  *
  */
