@@ -8,7 +8,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 public class AdapterForClients extends BaseAdapter {
-	
+
+	/**
+	 * A new comment
+	 */
 	private Activity mcontext;
 	private int[] clientlogos = {R.drawable.client1, R.drawable.client2, R.drawable.client3, R.drawable.client4, R.drawable.client5, R.drawable.client6};
 	
