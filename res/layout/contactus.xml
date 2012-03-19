@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="122dp"
         android:text="@string/office_branch1_detailedaddress"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="146dp"
+        android:layout_marginTop="135dp"
         android:text="@string/office_branch2"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView1"
         android:layout_alignLeft="@+id/textView2"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="48dp"
         android:text="@string/office_branch2_detailedaddress"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
