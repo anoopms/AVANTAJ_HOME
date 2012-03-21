@@ -12,11 +12,13 @@ public class AdapterForMenuItems extends BaseAdapter {
 	
 	private Activity mContext;
 	private String[] menuitems;
+	private int[] menuicons = {R.drawable.technologies, R.drawable.clients, R.drawable.projects, R.drawable.employees, R.drawable.owners, R.drawable.careeroption, R.drawable.contactdetails, R.drawable.quoterequest, R.drawable.ic_launcher};;
 		
 		public AdapterForMenuItems(Activity context, String[] menuitems)
 	{
 		this.mContext = context;
 		this.menuitems = menuitems;
+	 
 	}
 		
 		static class ViewHolder
@@ -62,7 +64,7 @@ public class AdapterForMenuItems extends BaseAdapter {
 		}
 		//mViewHolder1.imageview.setImageResource(R.drawable.smalllogo);
 		mViewHolder1.textview.setText(menuitems[position]);
-		mViewHolder1.textview.setCompoundDrawablesWithIntrinsicBounds(R.drawable.smalllogo, 0, 0, 0);
+		mViewHolder1.textview.setCompoundDrawablesWithIntrinsicBounds(menuicons[position], 0, 0, 0);
 		mViewHolder1.textview.setCompoundDrawablePadding(10);
 		return convertView;
 		

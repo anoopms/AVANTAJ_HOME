@@ -5,7 +5,8 @@
         android:layout_height="wrap_content"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#5288DB"
         android:gravity="center_vertical"
-        android:minHeight="100dp"
+        android:minHeight="50dp"
          />
   

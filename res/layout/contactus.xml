@@ -11,6 +11,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="122dp"
+        android:textColor="#5288DB"
         android:text="@string/office_branch1_detailedaddress"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -21,6 +22,7 @@
         android:layout_above="@+id/textView2"
         android:layout_marginBottom="48dp"
         android:layout_marginLeft="32dp"
+        android:textColor="#5288DB"
         android:text="@string/office_branch1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -31,6 +33,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="135dp"
+        android:textColor="#5288DB"
         android:text="@string/office_branch2"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -41,6 +44,7 @@
         android:layout_above="@+id/textView1"
         android:layout_alignLeft="@+id/textView2"
         android:layout_marginBottom="48dp"
+        android:textColor="#5288DB"
         android:text="@string/office_branch2_detailedaddress"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -52,6 +56,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="48dp"
         android:layout_marginRight="159dp"
+        android:textColor="#5288DB"
         android:background="@drawable/locate_us" />
 
 </RelativeLayout>
