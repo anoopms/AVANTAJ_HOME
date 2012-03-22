@@ -1,6 +1,7 @@
 package com.Raja.Avantaj;
 
 import android.app.Fragment;
+
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -10,33 +11,37 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.Toast;
 
-/**
- * @author user5
- *
- */
 public class ContactUs extends Fragment {
+
+
+
 	Button mapus;
 	View v;
 	Fragment frag1=new MapFragment();
+
 	/* (non-Javadoc)
 	 * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
 	 */
-	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		 v = inflater.inflate(R.layout.contactus, container, false);
+		 TranslateAnimation slide = new TranslateAnimation(900,0,0,0);
+			slide.setDuration(600);
+			v.startAnimation(slide);
 		intilize();
 		return v;
 	}
+
 	// add a button to display the map
 	private void intilize() {
 		// TODO Auto-generated method stub
-		mapus = (Button)v.findViewById(R.id.map);
+		mapus =(Button) v.findViewById(R.id.map);
 		mapus.setOnClickListener(btnOnClickListener);
 				
 	}
@@ -49,7 +54,7 @@ public class ContactUs extends Fragment {
 			/*Toast.makeText(getActivity(),"Why didn't come", Toast.LENGTH_LONG).show();
 			Intent intent=new Intent(v.getContext(),MapUs.class);
 			ContactUs.this.startActivity(intent);*/
-			
+			Toast.makeText(getActivity(), "No Option", Toast.LENGTH_LONG).show();
 			FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
 			//frag1 = new MapFragment(); 
 			if(frag1.isAdded())
@@ -92,5 +97,6 @@ public class ContactUs extends Fragment {
 		}
 		
 	};
+
 
 }

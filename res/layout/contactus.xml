@@ -56,7 +56,6 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="48dp"
         android:layout_marginRight="159dp"
-        android:textColor="#5288DB"
         android:background="@drawable/locate_us" />
 
 </RelativeLayout>

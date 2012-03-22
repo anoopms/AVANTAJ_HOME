@@ -12,7 +12,7 @@ public class AdapterForMenuItems extends BaseAdapter {
 	
 	private Activity mContext;
 	private String[] menuitems;
-	private int[] menuicons = {R.drawable.technologies, R.drawable.clients, R.drawable.projects, R.drawable.employees, R.drawable.owners, R.drawable.careeroption, R.drawable.contactdetails, R.drawable.quoterequest, R.drawable.ic_launcher};;
+	private int[] menuicons = {R.drawable.technologies_pressed, R.drawable.clients_pressed, R.drawable.projects_pressed, R.drawable.employees_pressed, R.drawable.owners_pressed, R.drawable.careeroption_pressed, R.drawable.contactdetails_pressed, R.drawable.quoterequest_pressed, R.drawable.ic_launcher};;
 		
 		public AdapterForMenuItems(Activity context, String[] menuitems)
 	{
