@@ -11,7 +11,10 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.view.animation.TranslateAnimation;
+=======
+>>>>>>> 24da155a6f0bcf18accddbf8c6f4cc2efa48166f
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -31,9 +34,12 @@ public class ContactUs extends Fragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		 v = inflater.inflate(R.layout.contactus, container, false);
+<<<<<<< HEAD
 		 TranslateAnimation slide = new TranslateAnimation(900,0,0,0);
 			slide.setDuration(600);
 			v.startAnimation(slide);
+=======
+>>>>>>> 24da155a6f0bcf18accddbf8c6f4cc2efa48166f
 		intilize();
 		return v;
 	}
